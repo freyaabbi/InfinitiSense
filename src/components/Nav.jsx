@@ -10,7 +10,6 @@ const LINKS = [
   ['Dashboard', '#dashboard'],
   ['ROI', '#roi'],
   ['Market', '#market'],
-  ['Partner', '#partner'],
   ['Contact', '#contact'],
 ]
 

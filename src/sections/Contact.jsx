@@ -21,7 +21,7 @@ export default function Contact() {
   function submit(e) {
     e.preventDefault()
     const body = encodeURIComponent(`Name: ${form.name}\nOrg: ${form.org}\nType: ${form.type}\nSite size: ${form.size}\n\n${form.message}`)
-    window.location.href = `mailto:rmquaiser@gmail.com?subject=${encodeURIComponent(`Kleanbotics inquiry — ${form.type}`)}&body=${body}`
+    window.location.href = `mailto:connect@infinitisense.com?subject=${encodeURIComponent(`Kleanbotics inquiry — ${form.type}`)}&body=${body}`
     setSent(true)
   }
 
@@ -57,7 +57,7 @@ export default function Contact() {
                 <Button variant="primary" size="lg" as="button" type="submit" className="w-full">
                   {sent ? 'Opening your email…' : 'Send inquiry'}
                 </Button>
-                {sent && <p className="caption text-center font-mono text-data-400">Your email app should open. Or email rmquaiser@gmail.com directly.</p>}
+                {sent && <p className="caption text-center font-mono text-data-400">Your email app should open. Or email connect@infinitisense.com directly.</p>}
               </form>
             </Reveal>
           </div>
@@ -71,8 +71,8 @@ export default function Contact() {
 
               <dl className="mt-8 space-y-3">
                 <Row term="Founder" desc="Raunaque" />
-                <Row term="Email" desc={<a className="text-data-400 hover:underline" href="mailto:rmquaiser@gmail.com">rmquaiser@gmail.com</a>} />
-                <Row term="Phone" desc={<a className="text-data-400 hover:underline" href="tel:+919810503438">+91 98105 03438</a>} />
+                <Row term="Email" desc={<a className="text-data-400 hover:underline" href="mailto:connect@infinitisense.com">connect@infinitisense.com</a>} />
+                <Row term="Phone" desc={<a className="text-data-400 hover:underline" href="tel:+919355230300">+91 93552 30300</a>} />
               </dl>
 
               <div className="mt-8">

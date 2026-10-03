@@ -13,8 +13,6 @@ import Features from './sections/Features.jsx'
 import RainMode from './sections/RainMode.jsx'
 import Comparison from './sections/Comparison.jsx'
 import Segments from './sections/Segments.jsx'
-import BuildLog from './sections/BuildLog.jsx'
-import Partner from './sections/Partner.jsx'
 import Contact from './sections/Contact.jsx'
 
 // Chart-heavy sections lazy-loaded (recharts split into its own chunk)
@@ -64,8 +62,6 @@ export default function App() {
         <Suspense fallback={<SectionFallback />}>
           <GrowthProjection />
         </Suspense>
-        <BuildLog />
-        <Partner />
         <Contact />
       </main>
 

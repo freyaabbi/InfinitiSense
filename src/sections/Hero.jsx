@@ -96,33 +96,26 @@ function ProductVisual({ onRobotClick, reducedMotion }) {
         <div className="tech-grid absolute inset-0 opacity-70" />
 
         {/* solar array */}
-        <div className="absolute inset-x-6 bottom-10 top-16 [transform:perspective(760px)_rotateX(34deg)]">
-          <div className="grid h-full grid-cols-5 gap-1.5">
-            {Array.from({ length: 15 }).map((_, i) => (
-              <div key={i} className="rounded-[3px] border border-data-500/20 bg-gradient-to-br from-navy-800 to-navy-900" />
+        <div className="absolute inset-x-4 bottom-8 top-14 [transform:perspective(760px)_rotateX(34deg)]">
+          <div className="grid h-full grid-cols-3 gap-2">
+            {Array.from({ length: 12 }).map((_, i) => (
+              <div key={i} className="rounded-[4px] border border-data-500/20 bg-gradient-to-br from-navy-800 to-navy-900" />
             ))}
           </div>
         </div>
 
-        {/* robot — single restrained glide */}
+        {/* robot — single restrained vertical pass */}
         <motion.button
           onClick={onRobotClick}
           aria-label="Kleanbotics robot"
-          className="absolute bottom-7 left-0 w-[42%] min-w-[120px]"
-          initial={{ x: '6%' }}
-          animate={reducedMotion ? { x: '55%' } : { x: ['6%', '120%', '6%'] }}
+          className="absolute left-[29%] w-[42%] min-w-[120px]"
+          initial={{ top: '22%' }}
+          animate={reducedMotion ? { top: '45%' } : { top: ['22%', '60%', '22%'] }}
           transition={reducedMotion ? {} : { duration: 10, repeat: Infinity, ease: 'easeInOut' }}
           whileTap={{ scale: 0.96 }}
         >
           <RobotSVG className="w-full" showSensor />
         </motion.button>
-
-        {/* callout */}
-        <figcaption className="absolute left-4 top-4">
-          <span className="rounded-[6px] border border-white/10 bg-navy-900/80 px-2.5 py-1 caption text-ink-300 backdrop-blur">
-            Waterless · EdgeAI · autonomous
-          </span>
-        </figcaption>
       </div>
 
       {/* footer note */}

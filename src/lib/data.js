@@ -98,15 +98,36 @@ export const COMPARISON = {
   ],
 }
 
-export const MARKET_GROWTH = [
-  { year: '2024', value: 145 },
-  { year: '2025', value: 179 },
-  { year: '2027', value: 340 },
-  { year: '2029', value: 640 },
-  { year: '2031', value: 980 },
-  { year: '2033', value: 1310 },
-  { year: '2035', value: 1670 },
+// --- Market opportunity (government-sourced) ---------------------------------
+// India's cumulative installed solar capacity, GW. Actuals from MNRE year-wise
+// achievements; 2030 is the CEA Optimal Generation Mix solar target.
+export const SOLAR_CAPACITY = [
+  { year: '2020', gw: 35 },
+  { year: '2021', gw: 40 },
+  { year: '2022', gw: 54 },
+  { year: '2023', gw: 67 },
+  { year: '2024', gw: 82 },
+  { year: '2025', gw: 106 },
+  { year: '2026', gw: 164, note: 'Jul 2026' },
+  { year: '2030', gw: 292, target: true },
 ]
+
+// Headline stats — every figure is from an official government source below.
+export const MARKET_STATS = [
+  { value: '164 GW', label: 'Solar installed in India', sub: 'MNRE, as of Jul 2026', ref: 'mnre' },
+  { value: '292 GW', label: 'Solar target by 2029–30', sub: 'CEA Optimal Generation Mix', ref: 'cea' },
+  { value: '₹75,021 cr', label: 'PM Surya Ghar outlay', sub: 'Union Cabinet, Feb 2024', ref: 'surya' },
+  { value: '1 crore', label: 'Rooftop households targeted', sub: 'PM Surya Ghar scheme', ref: 'surya' },
+  { value: '30 GW', label: 'New rooftop capacity', sub: 'Added under PM Surya Ghar', ref: 'surya' },
+]
+
+// Reference links cited in the section.
+export const MARKET_SOURCES = {
+  mnre: { label: 'MNRE — Year-wise achievements', url: 'https://mnre.gov.in/en/year-wise-achievement/' },
+  cea: { label: "PIB — India's energy landscape (CEA 2030 mix)", url: 'https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jun/doc2025622575501.pdf' },
+  surya: { label: 'PM India — PM Surya Ghar: Muft Bijli Yojana', url: 'https://www.pmindia.gov.in/en/news_updates/cabinet-approves-pm-surya-ghar-muft-bijli-yojana-for-installing-rooftop-solar-in-one-crore-households/' },
+  target: { label: 'PIB — 500 GW non-fossil capacity by 2030', url: 'https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1913789' },
+}
 
 export const GROWTH_PROJECTION = [
   { year: '2026', units: 25, revenue: 8, note: 'Pilot' },
@@ -154,6 +175,7 @@ export const SEGMENTS = {
     icon: '🏭',
     label: 'Solar Farms',
     tag: 'B2B',
+    image: '/images/solar-robot-farm.png',
     headline: 'Utility-scale O&M, automated',
     props: [
       'Direct industrial sales & customisation',
@@ -190,25 +212,6 @@ export const SEGMENTS = {
     cta: 'Explore partnership',
   },
 }
-
-export const PARTNER_CARDS = [
-  { icon: '💰', title: 'Funding', body: 'For electronics & mechanical enclosure development.', type: 'Investor' },
-  { icon: '🤝', title: 'Mentorship & networking', body: 'Industry guidance and connections.', type: 'Other' },
-  { icon: '🧪', title: 'Beta testing & pilot sites', body: 'Host a robot at your solar site.', type: 'Solar farm' },
-  { icon: '🔬', title: 'Field validation', body: 'Validate our electronics in real conditions.', type: 'Other' },
-  { icon: '📈', title: 'Revenue partnerships', body: 'Channel & revenue-share collaborations.', type: 'OEM' },
-]
-
-export const BUILD_LOG = [
-  { title: 'Chassis concept render', date: 'Jul 2026', tall: true, tone: 'cyan' },
-  { title: 'Sensor array bench test', date: 'Aug 2026', tall: false, tone: 'solar' },
-  { title: 'PCB layout v0.3', date: 'Sep 2026', tall: false, tone: 'cyan' },
-  { title: 'Brush & drive rig', date: 'Sep 2026', tall: true, tone: 'solar' },
-  { title: 'Motor-current sensing test', date: 'Oct 2026', tall: false, tone: 'cyan' },
-  { title: 'Dashboard first light', date: 'Oct 2026', tall: true, tone: 'cyan' },
-  { title: 'Rain sensor trial', date: 'Nov 2026', tall: false, tone: 'solar' },
-  { title: 'Field mockup on panel row', date: 'Nov 2026', tall: false, tone: 'cyan' },
-]
 
 export const FLEET_SITES = [
   { id: 'RJ', name: 'Rajasthan', x: 30, y: 40, robots: 12 },

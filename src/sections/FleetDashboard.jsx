@@ -52,7 +52,6 @@ export default function FleetDashboard() {
           eyebrow="Fleet intelligence"
           title="One cloud view of every robot in the field"
           subtitle="Status, battery, cleaning cycles, faults and energy recovered — across every site in India."
-          aside={<Chip tone="accent">Preview · simulated data</Chip>}
         />
 
         <Reveal>
@@ -63,6 +62,7 @@ export default function FleetDashboard() {
               <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
               <span className="ml-3 font-mono text-caption text-ink-500">kleanbotics.cloud/fleet</span>
+              <Chip tone="accent" className="ml-3 hidden sm:inline-flex">Preview · simulated data</Chip>
               <span className="ml-auto flex items-center gap-1.5 font-mono text-[11px] text-data-400">
                 <span className="h-1.5 w-1.5 rounded-full bg-data-400" /> LIVE
               </span>
