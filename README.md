@@ -1,6 +1,6 @@
 # Kleanbotics — marketing site
 
-Single-page, highly interactive marketing website for **Kleanbotics** by **InfinitiSense LLP** —
+Marketing website for **Kleanbotics** by **InfinitiSense LLP** —
 cloud-connected, EdgeAI-powered robots that clean solar panels on utility-scale farms and rooftops in India.
 
 **Clean panels. Smarter power.**
